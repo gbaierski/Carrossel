@@ -15,26 +15,14 @@
   ];
 ?>
 <div class="carrossel">
+
+<?php foreach ($dadosDoBanco as $slide) { ?>
   <div class="mySlides">
-    <img class="imagemCarrossel" src="NovidadeTEMP_1.png" style="width:100%">
-    <div class="textoSlide">Texto 1</div>
+    <img class="imagemCarrossel" src="<?=$slide[0]?>">
+    <div class="textoSlide"><?=$slide[1]?></div>
   </div>
-  <div class="mySlides">
-    <img class="imagemCarrossel" src="NovidadeTEMP_2.png" style="width:100%">
-    <div class="textoSlide">Texto 2</div>
-  </div>
-  <div class="mySlides">
-    <img class="imagemCarrossel" src="NovidadeTEMP_3.png" style="width:100%">
-    <div class="textoSlide">Texto 3</div>
-  </div>
-  <div class="mySlides">
-    <img class="imagemCarrossel" src="NovidadeTEMP_4.png" style="width:100%">
-    <div class="textoSlide">Texto 4</div>
-  </div>
-  <div class="mySlides">
-    <img class="imagemCarrossel" src="NovidadeTEMP_5.png" style="width:100%">
-    <div class="textoSlide">Texto 5</div>
-  </div>
+<?php } ?>
+
   <button class="botoesCarrossel botaoEsq" onclick="proximoSlide(-1)">&#10094;</button>
   <button class="botoesCarrossel botaoDir" onclick="proximoSlide(1)">&#10095;</button>
 
